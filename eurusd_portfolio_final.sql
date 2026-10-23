@@ -6,9 +6,47 @@
 -- Period: 2005 - 2020
 -- ==================================================
 
+-- ==================================================
+-- SECTION 1: DATABASE PREPARATION
+-- Source CSV File: cleaned_eurusd.csv
+-- CSV Imported into SQLite Table: eurusd_data
+-- New Table Created with Correct Data Types: cleaned_eurusd_data
+
+-- Note: The table already exists in eurusd_analysis.db.
+-- This section documents the database preparation process.
+-- Do not rerun it on the existing database.
+-- ==================================================
+
+CREATE TABLE cleaned_eurusd_data (
+    Date TEXT,
+    BO REAL,
+    BH REAL,
+    BL REAL,
+    BC REAL,
+    BCh REAL,
+    AO REAL,
+    AH REAL,
+    AL REAL,
+    AC REAL,
+    ACh REAL,
+    Price_Change REAL,
+    "Price_Change_%" REAL,
+    Year INTEGER,
+    Month TEXT,
+    Season TEXT,
+    B_volatility REAL,
+    A_volatility REAL,
+    Price_range TEXT
+);
+
+INSERT INTO cleaned_eurusd_data
+SELECT Date,BO,BH,BL,BC,BCh,AO,AH,AL,AC,ACh,
+Price_Change,"Price_Change_%",Year,Month,Season,
+B_volatility,A_volatility,Price_range 
+FROM eurusd_data;
 
 -- ==========================================
--- Section 1: Data Quality & Validation
+-- Section 2: Data Quality & Validation
 -- ==========================================
 -- Check the total number of records in the dataset
 SELECT COUNT(*) FROM cleaned_eurusd_data;
@@ -31,7 +69,7 @@ FROM cleaned_eurusd_data;
 -- Result: No missing values found in Date, BC, and AC.
 
 -- ==========================================
--- Section 2: Yearly Market Performance
+-- Section 3: Yearly Market Performance
 -- ==========================================
 
 --Has been categorised trading by Year
@@ -77,7 +115,7 @@ FROM yearly_price
 ORDER BY Annual_price_change_percentange ASC;
 
 -- ==========================================
--- Section 3: Monthly Market Performance
+-- Section 4: Monthly Market Performance
 -- ==========================================
 
 --Monthly Price Change in Each Year in Percent
@@ -172,7 +210,7 @@ LIMIT 1;
 
 
 -- ==========================================
--- Section 4: Weekday Market Analysis
+-- Section 5: Weekday Market Analysis
 -- ==========================================
 
 --Categorised Total  week days of Trading
@@ -225,7 +263,7 @@ GROUP BY  strftime("%w",Date)
 ORDER BY SQRT(Avg__squired_deviation) DESC;
 
 -- ==========================================
--- Section 5: Key Findings & Conclusion
+-- Section 6: Key Findings & Conclusion
 -- ==========================================
 
 -- Data Quality: 
