@@ -1,6 +1,10 @@
-EURO/USD Exchange Rate Analysis From 2005 to 2020.
-Project Goal
-The project purpose is to examine the historical  EUR/USD exchange rate from 2005 to 2020. It explains the price patterns, seasonal trends, monthly price levels and volatility behaviours.
+# EUR/USD Historical Exchange Rate Analysis (2005–2020)
+
+## Project Overview
+
+This project analyzes historical EUR/USD exchange rate data from 2005 to 2020 to identify price trends, seasonal patterns, monthly price movements, and volatility.
+
+The analysis uses Python, Microsoft Excel, and SQLite to clean, explore, visualize, and analyze historical exchange rate data.
 
 
 
