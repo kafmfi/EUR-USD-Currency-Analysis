@@ -55,6 +55,18 @@ Microsoft Excel was used to analyze yearly and seasonal EUR/USD price movements 
 - Created bar charts to compare yearly and seasonal average daily price changes.
 - Created a line chart to visualize changes in yearly volatility.
 
+### Excel Analysis Charts
+
+#### 1. Yearly Average Daily Price Change
+![Yearly Price Change](images/price_change_percent_year.png)
+
+#### 2. Seasonal Average Daily Price Change
+![Seasonal Price Change](images/seasonal_price_change.png)
+
+#### 3. Yearly Daily Return Volatility
+![Yearly Volatility](images/yearly_volatility.png)
+  
+
 ### Key Findings
 - **2017:** Highest positive average daily percentage price change (+0.042%).
 - **2014:** Most negative average daily percentage price change (-0.039%).
