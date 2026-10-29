@@ -112,3 +112,25 @@ SQL was used to analyze historical EUR/USD exchange rate data from 2005 to 2020.
 3. Run the analysis queries in `eurusd_portfolio_final.sql`.
 
 **Note:** The database preparation section documents how the analysis table was created. It should not be rerun on the provided database because the table already exists.
+
+## Tableau Dashboard Analysis (2005–2020)
+
+I created this interactive Tableau dashboard to tell a visual story of my EUR/USD historical data analysis from 2005 to 2020. The dashboard presents yearly and monthly bullish and bearish trading-day patterns, compares daily price-change volatility across weekdays, and explores the yearly distribution of daily price changes to understand how widely prices fluctuated and how stable or variable the market was over time.
+### 1. Yearly Bullish vs Bearish Trading Days (2005–2020)
+
+I calculated the number of bullish and bearish trading days for each year to show how often EUR/USD prices increased or decreased and to compare yearly trading-direction patterns.
+### 2. Monthly Bullish vs Bearish Trading Days Heatmap (2005–2020)
+
+I analyzed monthly bullish and bearish trading days to show how often EUR/USD prices increased or decreased within each month, helping the audience understand monthly trading-direction patterns.
+### 3. Weekday Volatility Analysis (2005–2020)
+
+I used the standard deviation of daily price changes to analyze EUR/USD volatility across different weekdays. The purpose was to compare price fluctuations and identify which weekdays experienced higher or lower volatility.
+### 4. Yearly Price Change Distribution (2005–2020)
+
+I analyzed the yearly distribution of daily EUR/USD price changes to understand how widely prices fluctuated within each year. The purpose was to compare the spread of daily price changes and identify years with higher or lower price variability.
+
+**Data Limitation:** The dataset contains partial-year data for 2005 and 2020. Therefore, the annual bullish and bearish trading-day counts for these years are not directly comparable with those of complete years.
+
+### Interactive Tableau Dashboard
+
+[View the EUR/USD Historical Trading Analysis Dashboard on Tableau Public](https://public.tableau.com/app/profile/kazi.islam5244/viz/EURUSDHistoricalTradingAnalysis2005-2020/EURUSDHistoricalTradingAnalysis)
