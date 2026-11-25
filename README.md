@@ -134,3 +134,11 @@ I analyzed the yearly distribution of daily EUR/USD price changes to understand 
 ### Interactive Tableau Dashboard
 
 [View the EUR/USD Historical Trading Analysis Dashboard on Tableau Public](https://public.tableau.com/app/profile/kazi.islam5244/viz/EURUSDHistoricalTradingAnalysis2005-2020/EURUSDHistoricalTradingAnalysis)
+
+## Machine Learning
+
+I tested whether daily EUR/USD data could predict the next trading day's price change. I compared Linear Regression and Decision Tree models against a baseline that always predicts zero change.
+
+The best model on the validation set was a Decision Tree using `B_volatility` with a maximum depth of 3. On the test set, its MAE was 0.00318030, compared with 0.00318183 for the baseline. This small difference provides little evidence of meaningful forecasting improvement.
+
+[View the machine learning notebook](./eurusd_machine_learning.ipynb)
