@@ -142,3 +142,9 @@ I tested whether daily EUR/USD data could predict the next trading day's price c
 The best model on the validation set was a Decision Tree using `B_volatility` with a maximum depth of 3. On the test set, its MAE was 0.00318030, compared with 0.00318183 for the baseline. This small difference provides little evidence of meaningful forecasting improvement.
 
 [View the machine learning notebook](./eurusd_machine_learning.ipynb)
+
+## Limitations and Next Steps
+
+- **Compare years with different data coverage.** The dataset contains partial years in 2005 and 2020. I would use complete years for annual trading-day count comparisons and show the percentage of observed trading days that were bullish or bearish in Tableau, with partial years clearly labelled.
+- **Check whether historical patterns persist.** The SQLite analysis found that Thursday had the largest average absolute daily price change over the full period. I would repeat the weekday analysis across shorter periods and add post-2020 data to see whether that result and the seasonal patterns hold in newer data.
+- **Evaluate forecasts on fresh data.** The selected Decision Tree reduced test MAE by about 0.05% compared with the zero-change baseline. I would test features such as recent price changes and rolling volatility using several chronological validation periods, then evaluate the selected model on a newer period reserved for the final test.
